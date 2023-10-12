@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add | Chai Aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName) {
+        const addList = document.createElement('li')
+        addList.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(addList)
+    }
+    addLang('python')
+    addLang('typescript')
+
+    function addOptiLang(langName) {
+        const addList = document.createElement('li')
+        addList.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(addList)
+    }
+    addOptiLang('golang')
+</script>
+</html>
