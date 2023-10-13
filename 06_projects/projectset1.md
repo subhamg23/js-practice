@@ -1,4 +1,4 @@
-Project1
+## Project 1
 
 ```Javascript
 const buttons = document.querySelectorAll('.button');
@@ -25,7 +25,7 @@ buttons.forEach(function(button){
 })
 ```
 
-Project2
+## Project 2
 ```Javascript
 const form = document.querySelector('form');
 form.addEventListener('submit', function (e) {
@@ -42,7 +42,29 @@ form.addEventListener('submit', function (e) {
   }
   else{
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
-    result.innerHTML = `<span>${bmi}</span>`
+    if(bmi < 18.6){
+      result.innerHTML = `<span>${bmi}</span> <br>
+      <span>Under Weight </span>`
+    }
+    else if(bmi > 18.6 && bmi <= 25.5){
+      result.innerHTML = `<span>${bmi}</span> <br>
+      <span>Normal Weight </span>`
+    }
+    else{
+      result.innerHTML = `<span>${bmi}</span> <br>
+      <span>Over Weight </span>`
+    }
   }
 });
+```
+
+## Project 3
+
+```Javascript
+const clock = document.getElementById('clock')
+
+setInterval(function(){
+  let date = new Date()
+  clock.innerHTML = date.toLocaleTimeString()
+},1000)
 ```
