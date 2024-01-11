@@ -18,9 +18,28 @@
 
 let myNums = [1,2,3]
 
-let myTotal = myNums.reduce(function(accm,cuurVal){
-    console.log(`accm : ${accm} and currval : ${cuurVal}`);
-    return accm + cuurVal
-},0)
+// let myTotal = myNums.reduce(function(accm,cuurVal){
+//     console.log(`accm : ${accm} and currval : ${cuurVal}`);
+//     return accm + cuurVal
+// },0)
 
-console.log(myTotal);
+// console.log(myTotal);
+
+const myObj = [
+    {
+        languageName : "Javascript",
+        languagefile : "js"
+    },
+    {
+        languageName : "Python",
+        languagefile : "py"
+    },
+    {
+        languageName : "C plus plus",
+        languagefile : "cpp"
+    }
+]
+
+myObj.forEach((item) => {
+    console.log(item.languageName);
+})
